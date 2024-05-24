@@ -1,10 +1,11 @@
 import React from "react";
 import Products from "./Products";
 import Layout from "./Layout";
+import Checking from "./checking";
 const Home = () => {
   return (
       <div className="hero">
-        <div className="card bg-dark text-white border-0">
+        {/* <div className="card bg-dark text-white border-0">
           <img
             src="https://img.freepik.com/free-photo/gray-painted-background_53876-94041.jpg"
             height="550px"
@@ -19,8 +20,10 @@ const Home = () => {
               <p className="card-text lead fs-2">CHECKOUT ALL THE TRENDS</p>
             </div>
           </div>
-        </div>
+        </div> */}
+        <Checking />
         <Products />
+        
       </div>
   );
 };
