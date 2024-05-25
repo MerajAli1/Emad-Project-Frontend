@@ -24,7 +24,7 @@ const Checking = () => {
       <div className="container" style={{ cursor: "pointer" }}>
         <section className="row">
           <div className="col-12 col-md-3 mt-5 shadow pt-4 border">
-            <h5>All Cateogries</h5>
+            <h5 className="text-center">All Cateogries</h5>
             <ul className="list-unstyled ">
               <li
                 className="p-2  rounded border-bottom"
@@ -155,10 +155,10 @@ const Checking = () => {
           </div>
 
 
-          <div className="col-12 col-md-9 mt-5">
+          <div className="col-12 col-md-9  mt-5">
             <div
               id="carouselExampleAutoplaying"
-              className="carousel slide"
+              className="carousel slide shadow"
               data-bs-ride="carousel"
             >
               {images.map(
