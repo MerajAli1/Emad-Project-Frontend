@@ -52,15 +52,7 @@ const Navbar = () => {
             </ul>
             <div className="row">
              <div className="d-flex">
-             <button className="btn btn-outline-dark">
-                <i className="fa fa-sign-in me-1"></i>
-                login
-              </button>
-              <button className="btn btn-outline-dark ms-2">
-                {/* <i className='fa fa-user-plus me-1'></i> */}
-                <i className="fa fa-user me-1"></i>
-                Register
-              </button>
+             
               <button
                 className="btn btn-outline-dark ms-2"
                 onClick={() => navigate("/admin")}

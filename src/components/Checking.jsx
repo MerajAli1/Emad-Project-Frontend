@@ -20,166 +20,194 @@ const Checking = () => {
     setOpenCategory(category === openCategory ? null : category);
   };
   return (
-    <div className="container" style={{ cursor: "pointer" }}>
-      <section className="row">
-        <div className="col-12 col-md-3 bg-dark text-white text-center mt-5 pt-5 fs-5">
-          <h5>All Cateogries</h5>
-          <ul className="list-unstyled">
-            <li
-              className="bg-secondary rounded"
-              onClick={() => handleCategoryClick("freshProduce")}
-            >
-              Fresh Produce{" "}
-              {openCategory ? (
-                <i class="fa-solid fa-arrow-up"></i>
-              ) : (
-              <i class="fa-solid fa-arrow-down-long"></i>
-              )}
-              {openCategory === "freshProduce" && (
-                <ul className="drop-down">
-                  <li>fruits </li>
-                  <li>vegetables</li>
-                </ul>
-              )}
-            </li>
-            <li className="bg-secondary mt-2 rounded " onClick={() => handleCategoryClick("meatSeaFood")}>
-              Meat & seafood   {openCategory ? (
-                <i class="fa-solid fa-arrow-up"></i>
-              ) : (
-              <i class="fa-solid fa-arrow-down-long"></i>
-              )}
-              {openCategory === "meatSeaFood" && (
-                <ul className="drop-down">
-                  <li>poultry</li>
-                  <li>beef</li>
-                  <li>pork</li>
-                  <li>fish</li>
-                </ul>
-              )}
-            </li>
-            <li className="bg-secondary mt-2 rounded " onClick={() => handleCategoryClick("dairyEggs")}>
-              Dairy & Eggs   {openCategory ? (
-                <i class="fa-solid fa-arrow-up"></i>
-              ) : (
-              <i class="fa-solid fa-arrow-down-long"></i>
-              )}
-              {openCategory === "dairyEggs" && (
-                <ul className="drop-down">
-                  <li>milk</li>
-                  <li>cheese</li>
-                  <li>yougert</li>
-                  <li>eggs</li>
-                </ul>
-              )}
-            </li>
-            <li className="bg-secondary mt-2 rounded " onClick={() => handleCategoryClick("bakery")}>
-              Bakery   {openCategory ? (
-                <i class="fa-solid fa-arrow-up"></i>
-              ) : (
-              <i class="fa-solid fa-arrow-down-long"></i>
-              )}
-              {openCategory === "bakery" && (
-                <ul className="drop-down">
-                  <li>bread</li>
-                  <li>pastries</li>
-                </ul>
-              )}
-            </li>
-            <li className="bg-secondary mt-2 rounded " onClick={() => handleCategoryClick("grainPasta")}>
-              Grain & Pasta   {openCategory ? (
-                <i class="fa-solid fa-arrow-up"></i>
-              ) : (
-              <i class="fa-solid fa-arrow-down-long"></i>
-              )}
-              {openCategory === "grainPasta" && (
-                <ul className="drop-down">
-                  <li>rice</li>
-                  <li>pasta</li>
-                  <li>flour</li>
-                </ul>
-              )}
-            </li>
-            <li className="bg-secondary mt-2 rounded " onClick={() => handleCategoryClick("condimentSauces")}>
-              Condiments & Sauces   {openCategory ? (
-                <i class="fa-solid fa-arrow-up"></i>
-              ) : (
-              <i class="fa-solid fa-arrow-down-long"></i>
-              )}
-              {openCategory === "condimentSauces" && (
-                <ul className="drop-down">
-                  <li>cannedvegetables</li>
-                  <li>soups</li>
-                </ul>
-              )}
-            </li>
-            <li className="bg-secondary mt-2 rounded " onClick={() => handleCategoryClick("spiceSeasoning")}>
-              Spices & Seasoning   {openCategory ? (
-                <i class="fa-solid fa-arrow-up"></i>
-              ) : (
-              <i class="fa-solid fa-arrow-down-long"></i>
-              )}
-              {openCategory === "spiceSeasoning" && (
-                <ul className="drop-down">
-                  <li>salt</li>
-                  <li>pepper</li>
-                  <li>herbs</li>
-                </ul>
-              )}
-            </li>
-          </ul>
-        </div>
-
-        <div className="col-12 col-md-9 mt-5">
-          <div
-            id="carouselExampleAutoplaying"
-            className="carousel slide"
-            data-bs-ride="carousel"
-          >
-            {images.map(
-              (data, index) =>
-                current === index && (
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img
-                        src={data}
-                        className="d-block w-100"
-                        height={500}
-                        alt="..."
-                      />
-                    </div>
-                  </div>
-                )
-            )}
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev"
-              onClick={prevSlide}
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next"
-              onClick={nextSlide}
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
+    <>
+      <div className="container" style={{ cursor: "pointer" }}>
+        <section className="row">
+          <div className="col-12 col-md-3 mt-5 pt-4 border">
+            <h5>All Cateogries</h5>
+            <ul className="list-unstyled ">
+              <li
+                className="p-2  rounded border-bottom"
+                onClick={() => handleCategoryClick("freshProduce")}
+              >
+                Fresh Produce{" "}
+                {openCategory ? (
+                  <i className="fa-solid fa-arrow-up"></i>
+                ) : (
+                  <i className="fa-solid fa-arrow-down-long"></i>
+                )}
+                {openCategory === "freshProduce" && (
+                  <ul className="drop-down">
+                    <li>fruits </li>
+                    <li>vegetables</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className="p-2 rounded border-bottom "
+                onClick={() => handleCategoryClick("meatSeaFood")}
+              >
+                Meat & seafood{" "}
+                {openCategory ? (
+                  <i className="fa-solid fa-arrow-up"></i>
+                ) : (
+                  <i className="fa-solid fa-arrow-down-long"></i>
+                )}
+                {openCategory === "meatSeaFood" && (
+                  <ul className="drop-down">
+                    <li>poultry</li>
+                    <li>beef</li>
+                    <li>pork</li>
+                    <li>fish</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className=" p-2 rounded border-bottom "
+                onClick={() => handleCategoryClick("dairyEggs")}
+              >
+                Dairy & Eggs{" "}
+                {openCategory ? (
+                  <i className="fa-solid fa-arrow-up"></i>
+                ) : (
+                  <i className="fa-solid fa-arrow-down-long"></i>
+                )}
+                {openCategory === "dairyEggs" && (
+                  <ul className="drop-down">
+                    <li>milk</li>
+                    <li>cheese</li>
+                    <li>yougert</li>
+                    <li>eggs</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className=" p-2 rounded border-bottom "
+                onClick={() => handleCategoryClick("bakery")}
+              >
+                Bakery{" "}
+                {openCategory ? (
+                  <i className="fa-solid fa-arrow-up"></i>
+                ) : (
+                  <i className="fa-solid fa-arrow-down-long"></i>
+                )}
+                {openCategory === "bakery" && (
+                  <ul className="drop-down">
+                    <li>bread</li>
+                    <li>pastries</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className=" p-2 rounded border-bottom "
+                onClick={() => handleCategoryClick("grainPasta")}
+              >
+                Grain & Pasta{" "}
+                {openCategory ? (
+                  <i className="fa-solid fa-arrow-up"></i>
+                ) : (
+                  <i className="fa-solid fa-arrow-down-long"></i>
+                )}
+                {openCategory === "grainPasta" && (
+                  <ul className="drop-down">
+                    <li>rice</li>
+                    <li>pasta</li>
+                    <li>flour</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className=" p-2 rounded border-bottom "
+                onClick={() => handleCategoryClick("condimentSauces")}
+              >
+                Condiments & Sauces{" "}
+                {openCategory ? (
+                  <i className="fa-solid fa-arrow-up"></i>
+                ) : (
+                  <i className="fa-solid fa-arrow-down-long"></i>
+                )}
+                {openCategory === "condimentSauces" && (
+                  <ul className="drop-down">
+                    <li>cannedvegetables</li>
+                    <li>soups</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className=" p-2 rounded border-bottom "
+                onClick={() => handleCategoryClick("spiceSeasoning")}
+              >
+                Spices & Seasoning{" "}
+                {openCategory ? (
+                  <i className="fa-solid fa-arrow-up"></i>
+                ) : (
+                  <i className="fa-solid fa-arrow-down-long"></i>
+                )}
+                {openCategory === "spiceSeasoning" && (
+                  <ul className="drop-down">
+                    <li>salt</li>
+                    <li>pepper</li>
+                    <li>herbs</li>
+                  </ul>
+                )}
+              </li>
+            </ul>
           </div>
-        </div>
-      </section>
-    </div>
+
+
+          <div className="col-12 col-md-9 mt-5">
+            <div
+              id="carouselExampleAutoplaying"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              {images.map(
+                (data, index) =>
+                  current === index && (
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img
+                          src={data}
+                          className="d-block w-100"
+                          height={500}
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                  )
+              )}
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+                onClick={prevSlide}
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+                onClick={nextSlide}
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          
+        </section>
+      </div>
+    </>
   );
 };
 
