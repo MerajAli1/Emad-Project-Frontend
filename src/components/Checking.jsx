@@ -23,7 +23,7 @@ const Checking = () => {
     <>
       <div className="container" style={{ cursor: "pointer" }}>
         <section className="row">
-          <div className="col-12 col-md-3 mt-5 pt-4 border">
+          <div className="col-12 col-md-3 mt-5 shadow pt-4 border">
             <h5>All Cateogries</h5>
             <ul className="list-unstyled ">
               <li
